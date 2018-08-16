@@ -335,6 +335,14 @@ body {
     margin-right: 15px;
   }
 
+  .user-info {
+    border: 2px solid orange;
+  } 
+
+   .top-ratings {
+      border: 2px solid green;
+   }
+
   .profile-picture {
     width: 70px;
     height: 70px;
