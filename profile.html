@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeggieWay</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon1.png">
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Fredericka+the+Great|Homemade+Apple|Inconsolata|Quicksand|Sigmar+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Frijole|Kirang+Haerang|Kranky|Londrina+Shadow|Meddon|Monofett|Sacramento" rel="stylesheet">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-storage.js"></script>
+    <script src="firebase-config.js"></script>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1 class="logo-1">VEGGIE<span class="logo-2">way</span></h1>
+      </div>
+    </header>
+    <div class="user-info section-border">
+      <img class="profile-picture" src="images/persona.jpg">
+      <h1 class="show-name"></h1>
+      <hr class="line">
+      <p class="info-title">SEGUIR</p>
+      <p class="lista-users"></p>   
+    </div>
+    <div class="new-post">
+      <form class="new-post-form">
+        <textarea class="new-post-input" type="text" rows="1"  placeholder="O que está acontecendo?"></textarea>
+        <div class="utilities">
+          <div class="add-photos">
+            <button class="add-image-button"><i class="add-image-icon far fa-images"></i></button>
+          </div>
+          <div class="privacy">
+            <p class="privacy-text">PRIVACY:</p>
+            <input type="checkbox" class="public-post"/>
+            <p class="privacy-text">pulic</p>
+            <input type="checkbox" class="private-post"/>
+            <p class="privacy-text">private</p>
+          </div>
+          <p class="character-counter">140</p> 
+        </div>
+        <button onclick="window.location.reload()" class="add-new-post" disabled>publicar</button>
+      </form>
+    </div>
+    <div class="top-ratings">
+      <h2>Ranking do dia</h2>
+      <div class="top-recipes">
+        <i class="top-icon fas fa-leaf"></i>
+        <h3>Receitas</h3>
+      </div>
+      <p>1. Pudim de cenoura<span> @veganinha10</span></p>
+      <p>2. Moqueca de caju<span> @joaoveg</span></p>
+      <p>3. Feijoada de banana<span> @pedrinhochegola</span></p>
+      <div class="top-restaurants">
+        <i class="top-icon fas fa-utensils"></i> 
+        <h3>Restaurantes</h3>
+      </div>
+      <p>1. Veguinho<span> @marcosgreen</span></p>
+      <p>2. CantinhoVeg<span> @jusaudavel</span></p>
+      <p>3. VegLoco<span> @escarola</span></p> 
+    </div>
+    <div class="feed">
+      <div class='display-content'>
+        <button class='filter-button' onclick="displayBtnMyMessages()">Meus posts</button>
+        <button class='filter-button' onclick="displayBtnFriendsMessages()">Posts de amigos</button>
+        <button class='filter-button' onclick="displayBtnFriendsMessages(), displayBtnMyMessages()">Todos os posts</button>
+      </div>
+      <div class="feed-list"></div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <!-- Arquivo JavaScript -->
+    <script src="profile.js"></script>
+  </body>
+</html>

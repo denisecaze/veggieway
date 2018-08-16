@@ -1,0 +1,179 @@
+/* Configurações gerais */
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #F4F0F0;
+  font-family: 'Inconsolata', monospace;
+}
+
+/* Login */
+.splash-bg, .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.splash-bg {
+  background-image: url(../images/laranjas.jpg);
+  filter: opacity(rgba(0, 0, 0, 0.2));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.splash-logo {
+  text-align: center;
+}
+
+.splash-logo-1 {
+  margin: 0 0 10px 0;
+  letter-spacing: 0.4;
+  font-size: 80px;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.splash-logo-2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 120px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-1 {
+  margin: 0 0 10px 0;
+  letter-spacing: 0.4;
+  font-size: 80px;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.logo-2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 120px;
+}
+
+.content {
+  display: none;
+  background-image: url(../images/laranjas.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-user-register, .user-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 30%;
+  margin-top: 40px;
+  padding: 40px 0;
+  border: 1px solid #EFEFEFFF;
+}
+
+.display-none {
+  display: none;
+}
+
+legend {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input {
+  width: 250px;
+  font-family: 'Inconsolata', monospace;
+  padding: 5px;
+  margin: 5px;
+}
+
+a {
+  margin-top: 10px;
+}
+
+.sign-in-button, .sign-up-button {
+  font-family: 'Inconsolata', monospace;
+  border: none;
+  outline: 0;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  padding: 8px 17px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  width: 250px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+  .new-user-register, .user-login {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .new-user-register, .user-login {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .new-user-register, .user-login {
+    width: 60%;
+  }
+
+  .splash-logo-1 {
+    font-size: 70px;
+  }
+
+  .splash-logo-2 {
+    font-size: 90px;
+  }
+
+  .logo-1 {
+    font-size: 70px;
+  }
+
+  .logo-2 {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .new-user-register, .user-login {
+    width: 80%;
+  }
+
+  .splash-logo-1 {
+    font-size: 50px;
+  }
+
+  .splash-logo-2 {
+    font-size: 80px;
+  }
+
+  .logo-1 {
+    font-size: 50px;
+  }
+
+  .logo-2 {
+    font-size: 80px;
+  }
+}
