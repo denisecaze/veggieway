@@ -53,8 +53,7 @@ function setPrivacy() {
 }
 
 // Adicionar novo post
-function addPostToProfile(event) {
-  event.preventDefault();
+function addPostToProfile() {
   var newPost = $(".new-post-input").val();
   var postFromDB = addPostToDB(newPost, setPrivacy());
   showPostItem(newPost, postFromDB.key)
