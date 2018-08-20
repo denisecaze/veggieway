@@ -20,20 +20,20 @@ function signUpClick(event) {
   var name = $(".sign-up-username").val();
   var email = $(".sign-up-email").val();
   var password = $(".sign-up-password").val();
- //CAMILA
+
   registerNewUser(name, email, password);
   function registerNewUser(name, email, password) {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(function(response) {
         
         var userId = response.user.uid;
-        //CAMILA 
+ 
         database.ref('users/' + userId).set({
           name: name,
           email: email
           
         });
-        // CAMILA
+
         redirectToProfile(userId);
       })
       .catch(function(error) {
