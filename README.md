@@ -5,7 +5,7 @@ A social network for vegans, vegetarians and those interested in the subject. Th
 It was the final project of the third sprint of Laboratoria bootcamp. Working in pairs, the goal was to build a mobile first social network, with registration / login page, possibility to follow users, to publish and delete messages and filter visualizations.
 
 ## Appearance
-![App map](./images/veggieway.png)
+![App map](images/veggieway.png)
 
 ## Technology Stack
 + HTML5
