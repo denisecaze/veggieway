@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VeggieWay</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Arquivo CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css?family=Dosis|Fredericka+the+Great|Homemade+Apple|Inconsolata|Quicksand|Sigmar+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Frijole|Kirang+Haerang|Kranky|Londrina+Shadow|Meddon|Monofett|Sacramento" rel="stylesheet">
     <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-storage.js"></script>
     <script src="firebase-config.js"></script>
     <!-- Ícones -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -26,7 +26,7 @@
       </div>
     </header>
     <div class="user-info section-border">
-      <img class="profile-picture" src="images/persona.jpg">
+      <img class="profile-picture" src="images/persona.jpg" alt="miniatura foto do usuário" />
       <h1 class="show-name"></h1>
       <hr class="line">
       <p class="info-title">SEGUIR</p>
@@ -34,21 +34,18 @@
     </div>
     <div class="new-post">
       <form class="new-post-form">
-        <textarea class="new-post-input" type="text" rows="1"  placeholder="O que está acontecendo?"></textarea>
+        <textarea class="new-post-input" type="text" rows="1" placeholder="O que está acontecendo?"></textarea>
         <div class="utilities">
-          <div class="add-photos">
-            <button class="add-image-button"><i class="add-image-icon far fa-images"></i></button>
-          </div>
           <div class="privacy">
             <p class="privacy-text">PRIVACY:</p>
-            <input type="checkbox" class="public-post"/>
+            <input type="checkbox" class="public-post" />
             <p class="privacy-text">pulic</p>
-            <input type="checkbox" class="private-post"/>
+            <input type="checkbox" class="private-post" />
             <p class="privacy-text">private</p>
           </div>
           <p class="character-counter">140</p> 
         </div>
-        <button onclick="window.location.reload()" class="add-new-post" disabled>publicar</button>
+        <button class="add-new-post-button" disabled>publicar</button>
       </form>
     </div>
     <div class="top-ratings">
@@ -69,10 +66,10 @@
       <p>3. VegLoco<span> @escarola</span></p> 
     </div>
     <div class="feed">
-      <div class='display-content'>
-        <button class='filter-button' onclick="displayBtnMyMessages()">Meus posts</button>
-        <button class='filter-button' onclick="displayBtnFriendsMessages()">Posts de amigos</button>
-        <button class='filter-button' onclick="displayBtnFriendsMessages(), displayBtnMyMessages()">Todos os posts</button>
+      <div class="display-content">
+        <button class="filter-button my-messages-button">Meus posts</button>
+        <button class="filter-button friends-messages-button">Posts de amigos</button>
+        <button class="filter-button all-messages-button">Todos os posts</button>
       </div>
       <div class="feed-list"></div>
     </div>

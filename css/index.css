@@ -22,10 +22,11 @@ body {
 }
 
 .splash-bg {
-  background-image: url(../images/laranjas.jpg);
-  filter: opacity(rgba(0, 0, 0, 0.2));
+  height: 100vh;
+  background-image: url(../images/frutas.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  filter: opacity(rgba(0, 0, 0, 0.2));
 }
 
 .splash-logo {
@@ -61,8 +62,9 @@ body {
 }
 
 .content {
+  height: 100vh;
   display: none;
-  background-image: url(../images/laranjas.jpg);
+  background-image: url(../images/frutas.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -139,19 +141,11 @@ a {
     width: 60%;
   }
 
-  .splash-logo-1 {
+  .splash-logo-1, .logo-1 {
     font-size: 70px;
   }
 
-  .splash-logo-2 {
-    font-size: 90px;
-  }
-
-  .logo-1 {
-    font-size: 70px;
-  }
-
-  .logo-2 {
+  .splash-logo-2, .logo-2 {
     font-size: 90px;
   }
 }
@@ -161,19 +155,19 @@ a {
     width: 80%;
   }
 
-  .splash-logo-1 {
+  .splash-logo, .logo {
+    margin-top: 25px; 
+  }
+
+  .splash-logo-1, .logo-1 {
     font-size: 50px;
   }
 
-  .splash-logo-2 {
+  .splash-logo-2, .logo-2 {
     font-size: 80px;
   }
 
-  .logo-1 {
-    font-size: 50px;
-  }
-
-  .logo-2 {
-    font-size: 80px;
+  .forms {
+    margin-top: 40px;
   }
 }

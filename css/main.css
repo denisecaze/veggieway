@@ -121,6 +121,10 @@ body {
   cursor: pointer;
 }
 
+.follow-button:hover {
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
 /* New Post */
 .new-post {
   grid-area: new-post;
@@ -147,7 +151,7 @@ body {
   overflow: hidden;
 }
 
-.add-new-post {
+.add-new-post-button {
   border: none;
   border-radius: 17px;
   outline: 0;
@@ -160,6 +164,10 @@ body {
   margin-top: 8px;
   margin-bottom: 0px;
   cursor: not-allowed;
+}
+
+.add-new-post-button:hover {
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
 }
 
 .utilities {
@@ -236,12 +244,14 @@ body {
   background-color: white;
   margin: 15px;
   padding: 20px;
+  word-wrap: break-word;
 }
 
 .post-feed-box-private {
   background-color: lightgrey;
   margin: 15px;
   padding: 20px;
+  word-wrap: break-word;
 }
 
 .post-feed-image {
@@ -267,6 +277,10 @@ body {
   padding: 8px 12px;
   margin-left: 20px;
   cursor: pointer;
+}
+
+.filter-button:hover {
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.6);
 }
 
 /* Elementos criados no JS */

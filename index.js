@@ -1,75 +1,70 @@
-var database = firebase.database();
+const database = firebase.database();
 
 $(document).ready(function() {
-  $('.content').delay('5000').fadeIn('slow');
-  $(".splash-logo").delay('500').fadeIn(2500);
+  $(".content").delay("1500").fadeIn();
+  $(".splash-logo").fadeIn(3500);
   $(".sign-in-button").click(signInClick);
   $(".register-link").click(showRegister);
   $(".sign-up-button").click(signUpClick);
-});
+})
 
-function showRegister(event) {
+const showRegister = (event) => {
   event.preventDefault();
-  $('.new-user-register').removeClass("display-none");
-  $('.user-login').addClass("display-none");
+  $(".new-user-register").removeClass("display-none");
+  $(".user-login").addClass("display-none");
 }
 
 // Cadastrar novos usuários
-function signUpClick(event) {
+const signUpClick = (event) => {
   event.preventDefault();
-  var name = $(".sign-up-username").val();
-  var email = $(".sign-up-email").val();
-  var password = $(".sign-up-password").val();
-
+  const name = $(".sign-up-username").val();
+  const email = $(".sign-up-email").val();
+  const password = $(".sign-up-password").val();
   registerNewUser(name, email, password);
-  function registerNewUser(name, email, password) {
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then(function(response) {
-        
-        var userId = response.user.uid;
- 
-        database.ref('users/' + userId).set({
-          name: name,
-          email: email
-          
-        });
+}
 
-        redirectToProfile(userId);
-      })
-      .catch(function(error) {
-        handleError(error);
-      });
-  }
+const registerNewUser = (name, email, password) => {
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then(response => {
+    const userId = response.user.uid;
+    database.ref("users/" + userId).set({
+      name: name,
+      email: email
+    })
+    redirectToProfile(userId);
+  })
+  .catch(error => {
+    handleError(error);
+  })
 }
 
 // Login de usuários
-function signInClick(event) {
+const signInClick = (event) => {
   event.preventDefault();
-
-  var email = $(".sign-in-email").val();
-  var password = $(".sign-in-password").val();
-
+  const email = $(".sign-in-email").val();
+  const password = $(".sign-in-password").val();
   signInUser(email, password);
 }
 
-function signInUser(email, password) {
+const signInUser = (email, password) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(function(response) {
-      var userId = response.user.uid;
-      redirectToProfile(userId);
-    })
-    .catch(function(error) {
-      handleError(error)
-    });
+  .then(response => {
+    const userId = response.user.uid;
+    redirectToProfile(userId);
+  })
+  .catch(error => {
+    handleError(error)
+  })
 }
 
 // Exibir alertas de erros
-function handleError(error) {
-  var errorMessage = error.message;
+const handleError = (error) => {
+  const errorMessage = error.message;
   alert(errorMessage);
 }
 
 // Direcionar para profile
-function redirectToProfile(userId) {
-  window.location = "profile.html?id=" + userId;
+const redirectToProfile = (userId) => {
+  localStorage.setItem("userId", userId)
+  window.location = "profile.html";
 }

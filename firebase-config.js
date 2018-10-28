@@ -7,4 +7,5 @@ var config = {
   storageBucket: "greenpeopleplace.appspot.com",
   messagingSenderId: "1048138109688"
 };
+
 firebase.initializeApp(config);
